@@ -7,16 +7,27 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 import { SecretComponent } from './secret/secret.component';
+import { NavComponent } from './nav/nav.component';
+import {MatMenuModule} from '@angular/material/menu'; 
+import {MatButtonModule} from '@angular/material/button';
+import { HomeComponent } from './home/home.component';
+import { ChampionComponent } from './champion/champion.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SecretComponent
+    SecretComponent,
+    NavComponent,
+    HomeComponent,
+    ChampionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule,
     NgxAuthFirebaseUIModule.forRoot({
       apiKey: "AIzaSyDYFB9PlV_duFuHPEZa6PFoD5QEE0p2HYU",
       authDomain: "login9001-ccffc.firebaseapp.com",
@@ -25,15 +36,15 @@ import { SecretComponent } from './secret/secret.component';
       storageBucket: "login9001-ccffc.appspot.com",
       messagingSenderId: "1060394146370",
   }
-  ,() => 'your_app_name_factory',{
+  ,() => 'your_app_name_factoryy',{
                   enableFirestoreSync: true, // enable/disable autosync users with firestore
                   toastMessageOnAuthSuccess: false, // whether to open/show a snackbar message on auth success - default : true
                   toastMessageOnAuthError: false, // whether to open/show a snackbar message on auth error - default : true
-                  authGuardFallbackURL: '/loggedout', // url for unauthenticated users - to use in combination with canActivate feature on a route
-                  authGuardLoggedInURL: '/loggedin', // url for authenticated users - to use in combination with canActivate feature on a route
                   passwordMaxLength: 60, // `min/max` input parameters in components should be within this range.
                   passwordMinLength: 8, // Password length min/max in forms independently of each componenet min/max.
                   // Same as password but for the name
+                  authGuardFallbackURL: '',
+                  authGuardLoggedInURL: '',
                   nameMaxLength: 50,
                   nameMinLength: 2,
                   // If set, sign-in/up form is not available until email has been verified.

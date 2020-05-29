@@ -1,9 +1,26 @@
-<div class="login">
-    <ngx-auth-firebaseui 
-    (onSuccess)="printUser($event)"
+<header *ngIf="!auth" class="header">
+    <button mat-raised-button color="primary" id="menu-button"[matMenuTriggerFor]="menu">Menu
+    </button>
+<mat-menu #menu="matMenu">
+  <button routerLink="" mat-menu-item>Home</button>
+  <button routerLink="/secret" mat-menu-item>Serverstatus</button>
+  <button routerLink="/champion" mat-menu-item>Championstats</button>
+</mat-menu>
+
+</header>
+<div class="login" *ngIf="auth">
+    <ngx-auth-firebaseui-login 
+    (onSuccess)="printUser()"
     [providers]="[providers.Google, providers.Facebook, providers.Twitter, providers.Github]"
-    [guestEnabled]="true"
+    [registrationEnabled]="false"
+    [resetPasswordEnabled]="false"
+    appearance="legacy"
     >
-</ngx-auth-firebaseui>
+</ngx-auth-firebaseui-login>
+Wenn sie sich nicht mit Google, Facebook, etc. anmelden wollen, können sie folgende Email und Passwort nutzen: 
+<br><br>
+Email: email@lukas-roeding.de
+    <br><br>
+Passwort: Geheimnis
 </div>
-<router-outlet></router-outlet>
+<router-outlet *ngIf="!auth"></router-outlet>

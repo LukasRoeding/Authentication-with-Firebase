@@ -1,4 +1,17 @@
 .login{
-    margin-left: 300px;
-    width:400px;
+    margin-left: 0;
+    width:50%;
+    margin-left: 25%;
+    height: 50vh;
+    font-size: larger;
+    color: rgb(37, 37, 37);
+    text-align: center;
 }
+.header{
+    background-color: rgb(184, 3, 3);
+
+}
+#menu-button{
+    width:100%;
+}
+

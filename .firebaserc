@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login9001-ccffc": {
+      "hosting": {
+        "login": [
+          "login9001-ccffc"
+        ]
+      }
+    }
+  }
+}

@@ -5,13 +5,16 @@ import {AuthProvider} from 'ngx-auth-firebaseui';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
+  auth:boolean=false;
   title = 'login';
   providers = AuthProvider;
   
-      printUser(event) {
-        console.log(event);
+      printUser() {
+       this.auth=!this.auth;
+       console.log(this.auth);
     }
-
+    ngOnInit() {
+      this.auth=true;
+    }
 }

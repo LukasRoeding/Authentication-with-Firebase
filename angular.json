@@ -94,9 +94,7 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/material-design-icons/iconfont/material-icons.css"
-              
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -125,8 +123,13 @@
               "devServerTarget": "login:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "login"
 }
