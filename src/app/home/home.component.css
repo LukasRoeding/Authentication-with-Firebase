@@ -5,7 +5,24 @@
 }
 .text{
     color:white;
-    font-size: 2em;
+    font-size: 3vh;
     text-align: center;
-    margin-top: 0em;
+    margin-top: 0;
+}
+@media only screen and (max-width: 1000px) {
+
+        
+    }
+    .text{
+        font-size: 2.9vh;
+    }    @media only screen and (min-height: 600px) {
+        .text{
+            font-size: 2.5vh;
+        } 
+    }
+
+@media only screen and (min-width: 2000px) {
+    .text{
+        font-size: 3.5vh;
+    }
 }
