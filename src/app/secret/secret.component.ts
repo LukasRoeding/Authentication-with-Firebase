@@ -13,7 +13,7 @@ export class SecretComponent implements OnInit {
   items=[];
 
   constructor(private http: HttpClient) {
-    this.http.get<Post>('https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key=RGAPI-aa22acf8-9d16-4837-852b-0b9928773842').toPromise().then
+    this.http.get<Post>('https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key=').toPromise().then
     (data => {for (var i=0; i < 4; i++){
           this.items.push(data.services[i])};
         }); console.log(this.items);

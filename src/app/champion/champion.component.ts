@@ -10,7 +10,7 @@ import { Post } from '../champion/post';
 export class ChampionComponent implements OnInit {
 items=[];
 sortedItems:[];
-  constructor(private http: HttpClient) { this.http.get<Post>('https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5?api_key=RGAPI-aa22acf8-9d16-4837-852b-0b9928773842').toPromise().then
+  constructor(private http: HttpClient) { this.http.get<Post>('https://cors-anywhere.herokuapp.com/https://euw1.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5?api_key=').toPromise().then
   (data => {for (var i=0; i < 300; i++){
     this.items.push(data.entries[i])};this.items.sort(this.compare);
     this.items.reverse();
