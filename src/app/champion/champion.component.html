@@ -1,1 +1,14 @@
-<p>champion works!</p>
+<body>
+    <br>
+<h1 style="text-align: center;">Leaderboard</h1>
+<div class="ranked-container">
+    <div class="ranked-name">
+        Beschwörername:<br><br>
+        <li class="list-item"*ngFor="let item of (items | slice:0:20);">{{item.summonerName}}</li>
+    </div>
+    <div class="ranked-points">
+        Leaguepoints:<br><br>
+        <li class="list-item"*ngFor="let item of (items | slice:0:20);">{{item.leaguePoints}}</li>
+    </div>
+</div>
+</body>

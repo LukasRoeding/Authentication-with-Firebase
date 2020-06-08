@@ -2,9 +2,10 @@
     background-image: url(../../assets/background.png);
     background-size: cover ;
     height:100vh;
+    margin: 0;
 }
 .text{
-    color:white;
+    color: blanchedalmond;
     font-size: 3vh;
     text-align: center;
     margin-top: 0;

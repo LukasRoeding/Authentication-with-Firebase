@@ -9,9 +9,18 @@
 }
 .header{
     background-color: rgb(184, 3, 3);
+    font-size: larger;
 
 }
 #menu-button{
-    width:100%;
-}
-
+        width:100%;
+        font-size: larger;
+        color: blanchedalmond;
+        background-color: rgb(36, 31, 59);
+        border-style: solid;
+        border-color: burlywood;
+        border-width: 3px;
+    }
+#menu-routing{
+    width: 200vw;
+} 

@@ -9,8 +9,7 @@ import { ChampionComponent } from './champion/champion.component';
 const routes: Routes = [
   {
     path: '',
-    component:HomeComponent,
-    canActivate: [LoggedInGuard]
+    component:HomeComponent
   },
   {
     path: 'secret',
