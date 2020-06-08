@@ -9,7 +9,7 @@ export class AppComponent {
   auth:boolean=false;
   title = 'login';
   providers = AuthProvider;
-  
+  //** auth is used to make the loginwindow disappear / the header to appear after a successfull login. */
       printUser() {
        this.auth=!this.auth;
        console.log(this.auth);

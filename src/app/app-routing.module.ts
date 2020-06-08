@@ -5,7 +5,7 @@ import { SecretComponent } from './secret/secret.component';
 import { HomeComponent } from './home/home.component';
 import { ChampionComponent } from './champion/champion.component';
 
-
+//** Secret- and ChampionComponent are guarded. The HomeComponent is not guarded by the LoggedInGuard*/
 const routes: Routes = [
   {
     path: '',

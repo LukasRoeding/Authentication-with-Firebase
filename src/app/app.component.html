@@ -1,3 +1,5 @@
+
+<!-- navigation window using angular materials / material menu-->
 <header *ngIf="!auth" class="header">
     <button mat-raised-button id="menu-button"[matMenuTriggerFor]="menu">Menu
     </button>
@@ -9,6 +11,7 @@
 
 </header>
 <div class="login" *ngIf="auth">
+  <!--the login window, (onSuccess) calls a function when the login is successfull, providers euqals the different login options.-->
     <ngx-auth-firebaseui-login 
     (onSuccess)="printUser()"
     [providers]="[providers.Google]"
